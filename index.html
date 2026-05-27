@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danny | Personal Website and Portfolio">
+    <title>Danny | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&family=Orbitron:wght@900&family=Syncopate:wght@700&family=Syne:wght@800&family=Bebas+Neue&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Main Profile Section -->
+    <section class="hero-section">
+        <div class="profile-card" id="profileCard">
+            <div class="avatar-container">
+                <!-- User should put their avatar image here representing 'الصوره' -->
+                <img src="avatar.jpg" alt="Basil" class="avatar" onerror="this.src='avatar.png'; this.onerror=null;">
+                <div class="avatar-glow"></div>
+            </div>
+
+            <h1 class="name">Danny</h1>
+            <div class="info-badges">
+                <div class="info-badge">
+                    <i class="fas fa-birthday-cake"></i> 12/30
+                </div>
+                <div class="info-badge">
+                    <i class="fas fa-map-marker-alt"></i> Riyadh
+                </div>
+                <div class="info-badge">
+                    <i class="fas fa-eye"></i> <span id="visit-count">...</span>
+                </div>
+            </div>
+
+            <div class="favorite-song">
+                <div class="player-top">
+                    <div class="song-details">
+                        <div class="song-info">
+                            <i class="fas fa-compact-disc" id="discIcon"></i>
+                            <span>How To Save A Life - The Fray</span>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up" id="volumeIcon"></i>
+                            <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01"
+                                value="0.1">
+                        </div>
+                    </div>
+                    <button id="playBtn" class="play-btn">
+                        <i class="fas fa-play" id="playIcon"></i>
+                    </button>
+                </div>
+                <div class="time-control">
+                    <span id="currentTimeDisplay">3:14</span>
+                    <input type="range" id="timeSlider" class="time-slider" min="0" max="230" value="194">
+                    <span id="durationDisplay">3:50</span>
+                </div>
+                <!-- User needs to place the complete song as song.mp3 in the folder -->
+                <audio id="bgMusic" src="song.mp3" loop></audio>
+            </div>
+
+            <div class="social-links">
+                <a href="https://twitch.tv/i_base" target="_blank" class="social-btn twitch">
+                    <i class="fab fa-twitch"></i>
+                    <span>@i_base</span>
+                </a>
+                <a href="https://instagram.com/vt9cd" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>@vt9cd</span>
+                </a>
+                <a href="https://steamcommunity.com/id/baselz/" target="_blank" class="social-btn steam">
+                    <i class="fab fa-steam"></i>
+                    <span>Steam</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Scroll Revealed Section -->
+    <section class="reveal-section">
+        <div class="achievement-card glass-panel hidden" id="achievementCard">
+            <div class="trophy-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2 class="achievement-title">Best RLCS Open Result</h2>
+            <div class="achievement-rank">
+                <span class="rank-number">105</span><span class="rank-suffix">th</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+
+
+    <!-- Clips Section -->
+    <section class="clips-section">
+        <h2 class="clips-title">Clips</h2>
+        <div class="clips-container">
+            <!-- First Clip (Left) -->
+            <div class="clip-item glass-panel hidden from-left">
+                <div class="clip-vid-container">
+                    <!-- أضف مسار المقطع الخاص بك هنا (مثل clip1.mp4) -->
+                    <video src="clip1.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="clip-content">
+                    <h3>Mechanics</h3>
+                </div>
+            </div>
+
+            <!-- Second Clip (Right) -->
+            <div class="clip-item glass-panel hidden from-right flex-reverse">
+                <div class="clip-vid-container">
+                    <!-- أضف مسار المقطع الخاص بك هنا (مثل clip2.mp4) -->
+                    <video src="clip2.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="clip-content text-right">
+                    <h3>Read</h3>
+                </div>
+            </div>
+
+            <!-- Third Clip (Left) -->
+            <div class="clip-item glass-panel hidden from-left">
+                <div class="clip-vid-container">
+                    <!-- أضف مسار المقطع الخاص بك هنا (مثل clip3.mp4) -->
+                    <video src="clip3.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="clip-content">
+                    <h3>Control</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <h2 class="clips-title partners-title">Partners</h2>
+        <div class="partners-container">
+            <!-- Discord Partner Card -->
+            <a href="https://discord.gg/hzuSuGrexF" target="_blank" class="partner-card clip-item hidden from-bottom"
+                style="text-decoration: none;">
+                <div class="partner-icon">
+                    <img src="server-logo.png" alt="Lords Landing Server" class="server-logo"
+                        onerror="this.src='avatar.png'; this.onerror=null;">
+                </div>
+                <div class="partner-content">
+                    <h3>Lords Landing server</h3>
+                    <p>Join their community and chat on Discord.</p>
+                </div>
+                <div class="join-btn-container">
+                    <span class="join-btn-pill">Join Now <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Danny. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
